@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { MaterializeModule } from 'ng2-materialize';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from "./app.routing.module";
 import { SharedModule } from "./shared/shared.module";
-
 
 
 @NgModule({
@@ -12,6 +12,7 @@ import { SharedModule } from "./shared/shared.module";
     AppComponent
   ],
   imports: [
+    AppRoutingModule,
     SharedModule,
     BrowserModule,
     MaterializeModule.forRoot()
