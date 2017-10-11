@@ -32,7 +32,7 @@
 
     <div class="col s12 m6">
       <label>Phone: </label>
-      <input type="text"
+      <input type="number"
              id="phone"
              formControlName="phone">
     </div>
@@ -74,7 +74,7 @@
   
       <div class="col s12 m6">
         <label>Zip: </label>
-        <input type="text"
+        <input type="number"
                id="zip"
                formControlName="zip">
       </div>
@@ -108,10 +108,6 @@
                formControlName="catchphrase">
       </div>
   
- 
-
-      
-    
     <div class="col s12 right-align">
       <button type="submit"
               [disabled]="userForm.invalid"
