@@ -7,11 +7,11 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { UserFormComponent } from "./user-form/user-form.component";
 import { UserComponent } from './user.component';
 import { UserRoutingModule } from "./user.routing.module";
-
-
+import { UserListComponent } from "./user-list/user-list.component";
+import { UserService } from "./services/user.service";
 
 @NgModule({
-  declarations: [UserComponent, UserFormComponent],
+  declarations: [UserComponent, UserFormComponent, UserListComponent],
   exports: [UserComponent],
   imports: [
     MaterializeModule,
@@ -19,7 +19,8 @@ import { UserRoutingModule } from "./user.routing.module";
     CommonModule,
     ReactiveFormsModule,
     FormsModule
-  ]
+  ],
+  providers: [ UserService ]
 })
 
 export class UserModule {}

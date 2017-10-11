@@ -1,0 +1,39 @@
+<div class="col s12 m6">
+    <div class="card-panel user-info">
+      <h5 class="center-align truncate">{{user?.name}}</h5>
+      <h5 class="user-info__title">
+        <img class="user-info__icon" src="assets/icons/boy.svg"> 
+        Personal Info:
+      </h5>
+      <div class="divider"></div>
+      <div class="user-info__block">
+        <p><strong>Username:</strong> {{user?.username}}</p>
+        <p><strong>Email:</strong> {{user?.email}}</p>
+        <p><strong>Phone:</strong> {{user?.phone}}</p>
+        <p><strong>Website:</strong> {{user?.website}}</p>
+      </div>
+      <h5 class="user-info__title">
+        <img class="user-info__icon" src="assets/icons/placeholder.svg">  
+        Address Info:
+      </h5>
+      <div class="divider"></div>
+      <div class="user-info__block">
+        <p><strong>Street:</strong> {{user?.address.street}}</p>
+        <p><strong>Suite:</strong> {{user?.address.suite}}</p>
+        <p><strong>City:</strong> {{user?.address.city}}</p>
+        <p><strong>Zip:</strong> {{user?.address.zipcode}}</p>
+      </div>
+
+      <h5 class="user-info__title">
+        <img class="user-info__icon" src="assets/icons/resume.svg">
+        Professional Info:</h5>
+      <div class="divider"></div>
+      <div class="user-info__block">
+        <p><strong>Company name:</strong> {{user?.company.name}}</p>
+        <p><strong>Catchphrase:</strong> {{user?.company.catchPhrase}}</p>
+        <p><strong>BS:</strong> {{user?.company.bs}}</p>
+
+      </div>
+    </div>
+  </div>
+  
