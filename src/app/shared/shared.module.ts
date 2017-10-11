@@ -3,7 +3,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MaterializeModule } from 'ng2-materialize';
 import { RouterModule } from '@angular/router';
 
-
 @NgModule({
   declarations: [NavbarComponent],
   exports: [NavbarComponent],

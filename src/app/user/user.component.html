@@ -5,6 +5,19 @@
 
   <div class="col s12 m8">
     <h1 class="center-align">Users</h1>
-    <app-user-list *ngFor="let user of users" [user]="user"></app-user-list>
+    <app-search-bar (search)=searchUsers($event)></app-search-bar>
+    <app-user-list *ngFor="let user of users | filterBy: userFilter; let i = index"
+                    [user]="user"
+                    [index]="i"
+                    [userLength]="usersLength"></app-user-list>
+  <ng-container *ngIf="users">
+      <div class="center-align" *ngIf="users.length + 2 != usersLength">
+          <button type="button" class="btn btn-large" (click)="moreUsers()">More Users</button>
+        </div>
+  </ng-container>
+
   </div>
+
+
+
 </div>

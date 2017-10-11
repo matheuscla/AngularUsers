@@ -9,6 +9,8 @@ import { UserService } from "./services/user.service";
 export class UserComponent implements OnInit {
   public users;
   public subscriptions;
+  public userFilter;
+  public usersLength: number = 4;
 
   constructor(public userService: UserService) { }
 
@@ -17,4 +19,11 @@ export class UserComponent implements OnInit {
     .subscribe(users => this.users = users);
   }
 
+  searchUsers(event) {
+    this.userFilter = { name: event };
+  }
+
+  moreUsers() {
+    this.usersLength += 4;
+  }
 }
