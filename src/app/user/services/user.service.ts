@@ -10,7 +10,8 @@ export class UserService {
 
   getUsers() {
     return this.http.get(`${API.domain}/users`)
-      .map(res => res.json());
+      .map(res => res.json())
+      .toPromise(); 
   }
 
   createUser(user) {
