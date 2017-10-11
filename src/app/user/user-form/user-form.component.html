@@ -1,3 +1,49 @@
-<p>
-  user-form works!
-</p>
+<div class="row z-depth-1 user-form">
+  <h4 class="center-align">New User</h4>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value)">
+    <div class="col s12">
+      <label>Name: </label>
+      <input type="text"
+             id="name"
+             formControlName="name">
+    </div>
+
+    <div class="col s12">
+      <label>Username: </label>
+      <input type="text"
+             id="username"
+             formControlName="username">
+    </div>
+
+    <div class="col s12">
+      <label>Email: </label>
+      <input type="email"
+             email="true"
+             id="email"
+             formControlName="email">
+    </div>
+
+    <div class="col s12">
+      <label>Phone: </label>
+      <input type="text"
+             id="phone"
+             formControlName="phone">
+    </div>
+
+    <div class="col s12">
+      <label>Website: </label>
+      <input type="text"
+             id="website"
+             formControlName="website">
+    </div>
+    
+    <div class="col s12 right-align">
+      <button type="submit"
+              [disabled]="userForm.invalid"
+              class="btn btn-waved waves-effect waves-light btn-block">
+              Create User
+      </button>
+    </div>
+
+  </form>
+</div>
