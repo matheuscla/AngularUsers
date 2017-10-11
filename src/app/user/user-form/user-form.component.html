@@ -2,20 +2,27 @@
   <h4 class="center-align">New User</h4>
   <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value)">
     <div class="col s12">
+      <h5 class="user-form__title">
+        <img class="user-form__icon" src="assets/icons/boy.svg"> 
+        Personal Info:</h5>
+      <div class="divider"></div>
+    </div>
+
+    <div class="col s12">
       <label>Name: </label>
       <input type="text"
              id="name"
              formControlName="name">
     </div>
 
-    <div class="col s12">
+    <div class="col s12 m6">
       <label>Username: </label>
       <input type="text"
              id="username"
              formControlName="username">
     </div>
 
-    <div class="col s12">
+    <div class="col s12 m6">
       <label>Email: </label>
       <input type="email"
              email="true"
@@ -23,19 +30,87 @@
              formControlName="email">
     </div>
 
-    <div class="col s12">
+    <div class="col s12 m6">
       <label>Phone: </label>
       <input type="text"
              id="phone"
              formControlName="phone">
     </div>
 
-    <div class="col s12">
+    <div class="col s12 m6">
       <label>Website: </label>
       <input type="text"
              id="website"
              formControlName="website">
     </div>
+
+    <div class="col s12">
+        <h5 class="user-form__title">
+          <img class="user-form__icon" src="assets/icons/placeholder.svg">  
+          Address Info:</h5>
+        <div class="divider"></div>
+      </div>
+  
+      <div class="col s12 m6">
+        <label>Street: </label>
+        <input type="text"
+               id="street"
+               formControlName="street">
+      </div>
+  
+      <div class="col s12 m6">
+        <label>Suite: </label>
+        <input type="text"
+               id="suite"
+               formControlName="suite">
+      </div>
+  
+      <div class="col s12 m6">
+        <label>City: </label>
+        <input type="text"
+               id="city"
+               formControlName="city">
+      </div>
+  
+      <div class="col s12 m6">
+        <label>Zip: </label>
+        <input type="text"
+               id="zip"
+               formControlName="zip">
+      </div>
+
+
+    <div class="col s12">
+        <h5 class="user-form__title">
+        <img class="user-form__icon" src="assets/icons/resume.svg">
+          Professional Info:</h5>
+        <div class="divider"></div>
+      </div>
+  
+      <div class="col s12 m6">
+        <label>Company name: </label>
+        <input type="text"
+               id="company_name"
+               formControlName="company_name">
+      </div>
+
+      <div class="col s12 m6">
+          <label>BS: </label>
+          <input type="text"
+                 id="bs"
+                 formControlName="bs">
+        </div>
+  
+      <div class="col s12">
+        <label>Catchphrase: </label>
+        <input type="text"
+               id="catchphrase"
+               formControlName="catchphrase">
+      </div>
+  
+ 
+
+      
     
     <div class="col s12 right-align">
       <button type="submit"

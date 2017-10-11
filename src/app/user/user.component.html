@@ -12,12 +12,9 @@
                     [userLength]="usersLength"></app-user-list>
   <ng-container *ngIf="users">
       <div class="center-align" *ngIf="users.length + 2 != usersLength">
-          <button type="button" class="btn btn-large" (click)="moreUsers()">More Users</button>
+          <button type="button" class="btn btn-large btn-primary" (click)="moreUsers()">More Users</button>
         </div>
   </ng-container>
 
   </div>
-
-
-
 </div>
